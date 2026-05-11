@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+
+        body{
+            background-color: skyblue;
+            text-align: center;
+            font-family: Times New Roman;
+        }
+
+        h1{
+            font-size: 55px;
+            margin-top: 20px;
+        }
+
+        input{
+            width: 230px;
+            height: 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid black;
+            padding-left: 10px;
+        }
+
+        textarea{
+            width: 230px;
+            height: 80px;
+            font-size: 16px;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+
+        select{
+            width: 245px;
+            height: 35px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        label{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu button{
+            width: 90px;
+            height: 35px;
+            font-size: 16px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-btn{
+            width: 150px;
+            height: 40px;
+            font-size: 18px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <button>Home</button>
+        <button>About</button>
+        <button>Contact</button>
+        <button>Services</button>
+        <button>Table</button>
+
+    </div>
+
+    <h1>Registration Form</h1>
+
+    <form>
+
+        <!-- 1 -->
+        <label>Name :</label><br>
+        <input type="text" placeholder="Enter your name">
+        <br><br>
+
+        <!-- 2 -->
+        <label>Register Number :</label><br>
+        <input type="text" placeholder="Enter your register number">
+        <br><br>
+
+        <!-- 3 -->
+        <label>Password :</label><br>
+        <input type="password" placeholder="Enter your password">
+        <br><br>
+
+        <!-- 4 -->
+        <label>Gender :</label><br>
+
+        <input type="radio" name="gender" style="width:15px;"> Male
+
+        <input type="radio" name="gender" style="width:15px;"> Female
+
+        <input type="radio" name="gender" style="width:15px;"> Other
+
+        <br><br>
+
+        <!-- 5 -->
+        <label>Age :</label><br>
+        <input type="number" placeholder="Enter your age">
+        <br><br>
+
+        <!-- 6 -->
+        <label>Phone Number :</label><br>
+        <input type="tel" placeholder="Enter your phone number">
+        <br><br>
+
+        <!-- 7 -->
+        <label>Email :</label><br>
+        <input type="email" placeholder="Enter your email">
+        <br><br>
+
+        <!-- 8 -->
+        <label>Date of Birth :</label><br>
+        <input type="date">
+        <br><br>
+
+        <!-- 9 -->
+        <label>Department :</label><br>
+
+        <select>
+            <option>Select Department</option>
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>MECH</option>
+        </select>
+
+        <br><br>
+
+        <!-- 10 -->
+        <label>College Name :</label><br>
+        <input type="text" placeholder="Enter your college name">
+        <br><br>
+
+        <!-- 11 -->
+        <label>City :</label><br>
+        <input type="text" placeholder="Enter your city">
+        <br><br>
+
+        <!-- 12 -->
+        <label>State :</label><br>
+        <input type="text" placeholder="Enter your state">
+        <br><br>
+
+        <!-- 13 -->
+        <label>Pincode :</label><br>
+        <input type="number" placeholder="Enter your pincode">
+        <br><br>
+
+        <!-- 14 -->
+        <label>Skills :</label><br>
+        <input type="text" placeholder="Enter your skills">
+        <br><br>
+
+        <!-- 15 -->
+        <label>Hobbies :</label><br>
+        <input type="text" placeholder="Enter your hobbies">
+        <br><br>
+
+        <!-- 16 -->
+        <label>Address :</label><br>
+        <textarea placeholder="Enter your address"></textarea>
+
+        <br><br>
+
+        <button class="submit-btn" type="submit">
+            Submit
+        </button>
+
+    </form>
+
+</body>
+
+</html>

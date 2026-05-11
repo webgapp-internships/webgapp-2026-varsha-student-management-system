@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Learning Website</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://wallpaperaccess.com/full/4391662.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+
+        .navbar h1{
+            margin: 0;
+            font-size: 35px;
+        }
+
+        .menu a{
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover{
+            color: yellow;
+        }
+
+        /* Main Container */
+
+        .container{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        /* Left Box */
+
+        .left-box{
+            width: 300px;
+            background-color: rgba(255,192,203,0.9);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px black;
+        }
+
+        .left-box h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .left-box ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-box li{
+            padding: 8px;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        .left-box li:hover{
+            color: blue;
+            transform: translateX(10px);
+        }
+
+        /* Right Box */
+
+        .right-box{
+            width: 500px;
+            background-color: rgba(255,255,255,0.9);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px black;
+        }
+
+        .right-box h2{
+            margin-top: 0;
+            font-size: 35px;
+        }
+
+        .right-box p{
+            font-size: 22px;
+            line-height: 35px;
+        }
+
+        /* Card */
+
+        .card{
+            width: 320px;
+            background-color: white;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .card img{
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .card h3{
+            font-size: 35px;
+            margin-top: 15px;
+        }
+
+        .card p{
+            font-size: 18px;
+        }
+
+        /* Contact */
+
+        .contact{
+            margin-top: 30px;
+        }
+
+        .contact p{
+            font-size: 22px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+
+        <h1>Python Learning</h1>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
+
+    <!-- Main Container -->
+
+    <div class="container">
+
+        <!-- Left Side -->
+
+        <div class="left-box">
+
+            <h2>Python Topics</h2>
+
+            <ul>
+                <li>Introduction to Python</li>
+                <li>Python Installation</li>
+                <li>Variables and Datatypes</li>
+                <li>Operators</li>
+                <li>Conditional Statements</li>
+                <li>Loops in Python</li>
+                <li>Functions</li>
+                <li>Lists and Tuples</li>
+                <li>Dictionaries</li>
+                <li>Object Oriented Programming</li>
+                <li>File Handling</li>
+                <li>Exception Handling</li>
+                <li>Modules and Packages</li>
+                <li>Python with Django</li>
+                <li>Mini Projects</li>
+            </ul>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="right-box">
+
+            <h2>Learn Python Easily</h2>
+
+            <p>
+                Python is one of the most popular and beginner friendly
+                programming languages in the world.
+            </p>
+
+            <div class="card">
+
+                <img src="https://www.python.org/static/community_logos/python-logo.png">
+
+                <h3>Python Coding</h3>
+
+                <p>
+                    Learn Python programming with real time examples,
+                    projects and website development.
+                </p>
+
+            </div>
+
+            <div class="contact">
+
+                <h2>Contact Information</h2>
+
+                <p>Email : pythonworld@gmail.com</p>
+
+                <p>Phone : +91 9876543210</p>
+
+                <p>Location : Chennai</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
