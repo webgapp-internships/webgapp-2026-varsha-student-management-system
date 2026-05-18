@@ -1,234 +1,416 @@
-{% load static %}
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Python Learning Website</title>
+    <title>Ultimate HTML CSS Showcase</title>
+    <link rel="icon"
+    href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
 
         body{
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url("https://wallpaperaccess.com/full/4391662.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
+            min-height:100vh;
+            background:
+            radial-gradient(circle at top,
+            #4facfe,
+            #00f2fe,
+            #111);
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            gap:20px;
+            color:white;
+            font-family:Arial;
+            overflow-x:hidden;
         }
 
-        /* Navbar */
+        /* GLOW EFFECTS */
 
-        .navbar{
-            background-color: rgba(0,0,0,0.8);
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 40px;
+        .glow1,
+        .glow2,
+        .glow3{
+            position:fixed;
+            width:250px;
+            height:250px;
+            border-radius:50%;
+            filter:blur(70px);
+            z-index:-1;
+            animation:move 8s infinite alternate;
         }
 
-        .navbar h1{
-            margin: 0;
-            font-size: 35px;
+        .glow1{
+            background:pink;
+            top:1;
+            left:0;
         }
 
-        .menu a{
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 20px;
-            transition: 0.3s;
+        .glow2{
+            background:cyan;
+            bottom:50;
+            right:0;
         }
 
-        .menu a:hover{
-            color: yellow;
+        .glow3{
+            background:orange;
+            top:50%;
+            left:40%;
         }
-
-        /* Main Container */
 
         .container{
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 40px;
+            width:90%;
+            max-width:1200px;
+            padding:30px;
+            border-radius:30px;
+
+            backdrop-filter:blur(15px);
+
+            background:rgba(255,255,255,0.1);
+
+            box-shadow:0 5px 15px gray;
+
+            display:grid;
+            gap:10px;
+
+            animation:show 2s;
         }
 
-        /* Left Box */
-
-        .left-box{
-            width: 300px;
-            background-color: rgba(255,192,203,0.9);
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 15px black;
+        header{
+            text-align:center;
         }
 
-        .left-box h2{
-            text-align: center;
-            margin-bottom: 20px;
+        h1{
+            font-size:50px;
+            text-transform:uppercase;
+            letter-spacing:5px;
+
+            background:linear-gradient(to right,
+            yellow,
+            pink,
+            cyan);
+
+            -webkit-background-clip:text;
+            color:transparent;
+
+            animation:gradient 5s infinite alternate;
         }
 
-        .left-box ul{
-            list-style: none;
-            padding: 0;
+        .line{
+            width:200px;
+            height:5px;
+            background:white;
+            margin:auto;
+            border-radius:10px;
         }
 
-        .left-box li{
-            padding: 8px;
-            font-size: 22px;
-            transition: 0.3s;
+        p{
+            font-size:18px;
+            line-height:35px;
         }
 
-        .left-box li:hover{
-            color: blue;
-            transform: translateX(10px);
+        q{
+            color:yellow;
         }
 
-        /* Right Box */
-
-        .right-box{
-            width: 500px;
-            background-color: rgba(255,255,255,0.9);
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 15px black;
+        mark{
+            background:lime;
+            color:black;
+            padding:5px;
+            border-radius:5px;
         }
 
-        .right-box h2{
-            margin-top: 0;
-            font-size: 35px;
+        blockquote{
+            margin-top:20px;
+            padding:20px;
+            border-left:5px solid cyan;
+            background:rgba(255,255,255,0.1);
+            transition:1s;
+            position:relative;
         }
 
-        .right-box p{
-            font-size: 22px;
-            line-height: 35px;
+        blockquote::before{
+            content:"❝";
+            font-size:50px;
+            position:absolute;
+            top:-10px;
+            left:10px;
+            opacity:0.3;
         }
 
-        /* Card */
+        blockquote:hover{
+            transform:scale(1.03);
+            background:rgba(255,255,255,0.2);
+        }
+
+        cite{
+            color:purple;
+        }
+
+        details{
+            padding:15px;
+            background:rgba(0,0,0,0.3);
+            border-radius:10px;
+        }
+
+        summary{
+            cursor:pointer;
+            font-size:20px;
+        }
+
+        progress,
+        meter{
+            width:100%;
+            height:30px;
+            accent-color:cyan;
+        }
+
+        abbr{
+            color:black;
+        }
+
+        del{
+            color:red;
+        }
+
+        ins{
+            color:lime;
+            text-decoration:none;
+        }
+
+        small{
+            opacity:0.7;
+        }
+
+        fieldset{
+            padding:20px;
+            border:2px solid white;
+            border-radius:20px;
+        }
+
+        legend{
+            padding:10px;
+            background:white;
+            color:black;
+            border-radius:10px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
 
         .card{
-            width: 320px;
-            background-color: white;
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0px 0px 10px gray;
+            padding:20px;
+            border-radius:20px;
+            background:rgba(255,255,255,0.1);
+
+            backdrop-filter:blur(10px);
+
+            transition:1s;
+            cursor:pointer;
+
+            aspect-ratio:1/1;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            align-items:center;
+            gap:5px;
         }
 
-        .card img{
-            width: 100%;
-            border-radius: 15px;
+        .card:hover{
+            transform:translateY(-10px) scale(1.05);
+            box-shadow:0 0 20px cyan;
         }
 
-        .card h3{
-            font-size: 35px;
-            margin-top: 15px;
+        .card h2{
+            text-transform:uppercase;
         }
 
         .card p{
-            font-size: 18px;
+            text-align:center;
         }
 
-        /* Contact */
-
-        .contact{
-            margin-top: 30px;
+        button{
+            padding:12px 25px;
+            border:none;
+            border-radius:50px;
+            background:cyan;
+            color:black;
+            font-weight:bold;
+            cursor:pointer;
+            transition:1s;
         }
 
-        .contact p{
-            font-size: 22px;
+        button:hover{
+            background:gold;
+            transform:scale(1.1);
+        }
+
+        img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+            border-radius:20px;
+        }
+
+        audio{
+            width:100%;
+        }
+
+        figure{
+            text-align:center;
+        }
+
+        figcaption{
+            margin-top:10px;
+            color:lightgray;
+        }
+
+        aside{
+            padding:20px;
+            border-radius:20px;
+            background:rgba(255,255,255,0.1);
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+        }
+
+        @keyframes move{
+
+            from{
+                transform:translateY(0px);
+            }
+
+            to{
+                transform:translateY(40px);
+            }
+        }
+
+        @keyframes show{
+
+            from{
+                opacity:0;
+                transform:translateY(100px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0px);
+            }
+        }
+
+        @keyframes gradient{
+
+            from{
+                filter:hue-rotate(0deg);
+            }
+
+            to{
+                filter:hue-rotate(360deg);
+            }
         }
 
     </style>
-
 </head>
-
 <body>
-
-    <!-- Navbar -->
-
-    <div class="navbar">
-
-        <h1>Python Learning</h1>
-
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Courses</a>
-            <a href="#">Contact</a>
-        </div>
-
-    </div>
-
-    <!-- Main Container -->
-
-    <div class="container">
-
-        <!-- Left Side -->
-
-        <div class="left-box">
-
-            <h2>Python Topics</h2>
-
-            <ul>
-                <li>Introduction to Python</li>
-                <li>Python Installation</li>
-                <li>Variables and Datatypes</li>
-                <li>Operators</li>
-                <li>Conditional Statements</li>
-                <li>Loops in Python</li>
-                <li>Functions</li>
-                <li>Lists and Tuples</li>
-                <li>Dictionaries</li>
-                <li>Object Oriented Programming</li>
-                <li>File Handling</li>
-                <li>Exception Handling</li>
-                <li>Modules and Packages</li>
-                <li>Python with Django</li>
-                <li>Mini Projects</li>
-            </ul>
-
-        </div>
-
-        <!-- Right Side -->
-
-        <div class="right-box">
-
-            <h2>Learn Python Easily</h2>
-
+    <div class="glow1"></div>
+    <div class="glow2"></div>
+    <div class="glow3"></div>
+    <main class="container">
+        <header>
+            <h1>Future Web Design</h1>
+            <div class="line"></div>
+            <br>
             <p>
-                Python is one of the most popular and beginner friendly
-                programming languages in the world.
+                Welcome to the <mark>modern creative webpage</mark>
+                using advanced HTML & CSS.
             </p>
-
-            <div class="card">
-
-                <img src="https://www.python.org/static/community_logos/python-logo.png">
-
-                <h3>Python Coding</h3>
-
+        </header>
+        <section>
+            <article>
+                <blockquote>
+                    <q>
+                       BELIEVE IN YOUR SELF😌!
+                    </q>
+                    <br><br>
+                    <cite>~varshaaky</cite>
+                </blockquote>
+            </article>
+        </section>
+        <aside>
+            <details>
+                <summary>Click To View More</summary>
+                <br>
                 <p>
-                    Learn Python programming with real time examples,
-                    projects and website development.
+                    <abbr title="Hyper Text Markup Language">
+                        HTML
+                    </abbr>
+                    and CSS can create amazing websites.
                 </p>
-
+                <br>
+                <p>
+                    <del>Old Design</del>
+                    →
+                    <ins>Modern Glass Design</ins>
+                </p>
+                <small>
+                    Updated in 2026
+                </small>
+            </details>
+        </aside>
+        <fieldset>
+            <legend>Skills Progress</legend>
+            <p>HTML Progress</p>
+            <progress value="90" max="100"></progress>
+            <br><br>
+            <p>CSS Meter</p>
+            <meter value="0.8"></meter>
+        </fieldset>
+        <section class="cards">
+            <div class="card">
+                <h2>Nature</h2>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+                    <figcaption>
+                        Beautiful Mountain View
+                    </figcaption>
+                </figure>
+                <button>Explore</button>
             </div>
-
-            <div class="contact">
-
-                <h2>Contact Information</h2>
-
-                <p>Email : pythonworld@gmail.com</p>
-
-                <p>Phone : +91 9876543210</p>
-
-                <p>Location : Chennai</p>
-
+            <div class="card">
+                <h2>Music</h2>
+                <audio controls>
+                    <source src="horse.mp3" type="audio/mpeg">
+                </audio>
+                <p>
+                    Relax with peaceful music.
+                </p>
+                <button>Listen</button>
             </div>
-
-        </div>
-
-    </div>
-
+            <div class="card">
+                <h2>Time</h2>
+                <p>
+                    Event starts at
+                    <time>7:00 PM</time>
+                </p>
+                <button>Join</button>
+            </div>
+        </section>
+        <footer>
+            <p>
+                Designed with ❤️ using
+                <strong>HTML</strong> &
+                <em>CSS</em>
+            </p>
+        </footer>
+    </main>
 </body>
-
 </html>
