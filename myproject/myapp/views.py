@@ -1,9 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Student
 
-
-# Create your views here.
-
 def index(request):
     varsha = "full stack development "
     return render(request, "main.html", {'varsha': varsha})
@@ -76,13 +73,10 @@ def stdform(request):
         )
 
         return redirect('result')
-
     return render(request, 'stdform.html')
 
 def result(request):
-
     result = Student.objects.all()
-
     return render(request, 'result.html', {"result": result})
 
 def edit(request, id):

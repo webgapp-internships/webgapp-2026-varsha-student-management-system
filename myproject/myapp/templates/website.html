@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -20,6 +21,7 @@
     body{
       background:#fff;
       color:#222;
+      overflow-x:hidden;
     }
 
     .navbar{
@@ -49,7 +51,10 @@
       min-height:100vh;
       display:flex;
       align-items:center;
-      background:linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.6)), url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop');
+      background:
+      linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.6)),
+      url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop');
+
       background-size:cover;
       background-position:center;
       padding:100px 0;
@@ -179,150 +184,373 @@
     }
 
     @media(max-width:768px){
+
+      .navbar{
+        padding:12px 0;
+      }
+
+      .navbar-brand{
+        font-size:24px;
+      }
+
+      .navbar-nav{
+        text-align:center;
+        margin-top:15px;
+      }
+
+      .nav-link{
+        margin:10px 0;
+      }
+
+      .hero{
+        min-height:auto;
+        text-align:center;
+        padding:100px 20px;
+      }
+
       .hero h1{
         font-size:42px;
+        line-height:1.3;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .btn-shop{
+        padding:12px 28px;
+        font-size:15px;
+      }
+
+      .section-title h2{
+        font-size:32px;
+      }
+
+      .products{
+        padding:70px 20px;
+      }
+
+      .product-card img{
+        height:280px;
+      }
+
+      .banner{
+        padding:70px 20px;
       }
 
       .banner h2{
         font-size:34px;
       }
 
+      .about{
+        padding:70px 20px;
+        text-align:center;
+      }
+
       .about h2{
         font-size:32px;
       }
+
+      .about img{
+        margin-bottom:25px;
+      }
+
+      .contact{
+        padding:70px 20px;
+      }
+
+      .form-control{
+        padding:12px;
+      }
+
+      footer p{
+        font-size:14px;
+      }
     }
+
   </style>
 </head>
 <body>
 
+  <!-- NAVBAR -->
+
   <nav class="navbar navbar-expand-lg sticky-top">
+
     <div class="container">
+
       <a class="navbar-brand" href="#">StyleZone</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <button class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#menu">
+
         <span class="navbar-toggler-icon"></span>
+
       </button>
 
       <div class="collapse navbar-collapse" id="menu">
+
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Shop</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
         </ul>
+
       </div>
+
     </div>
+
   </nav>
 
+  <!-- HERO -->
+
   <section class="hero" id="home">
+
     <div class="container">
+
       <div class="row align-items-center">
+
         <div class="col-lg-6">
+
           <h1>Modern Fashion Collection 2026</h1>
-          <p>Discover premium fashion styles with elegant modern designs inspired by top fashion brands.</p>
-          <a href="#products" class="btn-shop">Shop Now</a>
+
+          <p>
+            Discover premium fashion styles with elegant modern
+            designs inspired by top fashion brands.
+          </p>
+
+          <a href="#products" class="btn-shop">
+            Shop Now
+          </a>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+  <!-- PRODUCTS -->
+
   <section class="products" id="products">
+
     <div class="container">
+
       <div class="section-title">
         <h2>Trending Products</h2>
       </div>
 
       <div class="row g-4">
 
+        <!-- PRODUCT 1 -->
+
         <div class="col-md-4">
+
           <div class="card product-card">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop" class="card-img-top">
+
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
+            class="card-img-top">
+
             <div class="card-body text-center">
+
               <h5>Stylish Jacket</h5>
+
               <p class="price">₹1,999</p>
-              <button class="btn btn-dark rounded-pill px-4">Add to Cart</button>
+
+              <button class="btn btn-dark rounded-pill px-4">
+                Add to Cart
+              </button>
+
             </div>
+
           </div>
+
         </div>
 
+        <!-- PRODUCT 2 -->
+
         <div class="col-md-4">
+
           <div class="card product-card">
-            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop" class="card-img-top">
+
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"
+            class="card-img-top">
+
             <div class="card-body text-center">
+
               <h5>Casual Outfit</h5>
+
               <p class="price">₹2,499</p>
-              <button class="btn btn-dark rounded-pill px-4">Add to Cart</button>
+
+              <button class="btn btn-dark rounded-pill px-4">
+                Add to Cart
+              </button>
+
             </div>
+
           </div>
+
         </div>
 
+        <!-- PRODUCT 3 -->
+
         <div class="col-md-4">
+
           <div class="card product-card">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop" class="card-img-top">
+
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200&auto=format&fit=crop"
+            class="card-img-top">
+
             <div class="card-body text-center">
+
               <h5>Luxury Dress</h5>
+
               <p class="price">₹3,299</p>
-              <button class="btn btn-dark rounded-pill px-4">Add to Cart</button>
+
+              <button class="btn btn-dark rounded-pill px-4">
+                Add to Cart
+              </button>
+
             </div>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
+
+  <!-- BANNER -->
 
   <section class="banner">
+
     <div class="container">
+
       <h2>50% OFF Summer Collection</h2>
-      <p>Grab the latest fashion trends before the offer ends.</p>
-      <a href="#products" class="btn-shop mt-3">Explore Collection</a>
+
+      <p>
+        Grab the latest fashion trends before the offer ends.
+      </p>
+
+      <a href="#products" class="btn-shop mt-3">
+        Explore Collection
+      </a>
+
     </div>
+
   </section>
 
+  <!-- ABOUT -->
+
   <section class="about" id="about">
+
     <div class="container">
+
       <div class="row align-items-center g-5">
 
         <div class="col-lg-6">
+
           <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+
         </div>
 
         <div class="col-lg-6">
+
           <h2>About StyleZone</h2>
+
           <p>
-            StyleZone is a modern fashion brand inspired by luxury fashion websites. Our mission is to provide stylish and trendy outfits with premium quality.
+            StyleZone is a modern fashion brand inspired by luxury
+            fashion websites. Our mission is to provide stylish and
+            trendy outfits with premium quality.
           </p>
+
           <p>
-            We create fashionable collections for people who love modern and elegant dressing styles.
+            We create fashionable collections for people who love
+            modern and elegant dressing styles.
           </p>
-          <a href="#contact" class="btn-shop">Contact Us</a>
+
+          <a href="#contact" class="btn-shop">
+            Contact Us
+          </a>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
+  <!-- CONTACT -->
+
   <section class="contact" id="contact">
+
     <div class="container">
+
       <div class="section-title">
         <h2>Contact Us</h2>
       </div>
 
       <div class="row justify-content-center">
+
         <div class="col-lg-7">
+
           <form>
-            <input type="text" class="form-control" placeholder="Enter Your Name">
-            <input type="email" class="form-control" placeholder="Enter Your Email">
-            <textarea rows="5" class="form-control" placeholder="Your Message"></textarea>
-            <button class="btn-shop">Send Message</button>
+
+            <input type="text"
+            class="form-control"
+            placeholder="Enter Your Name">
+
+            <input type="email"
+            class="form-control"
+            placeholder="Enter Your Email">
+
+            <textarea rows="5"
+            class="form-control"
+            placeholder="Your Message"></textarea>
+
+            <button class="btn-shop">
+              Send Message
+            </button>
+
           </form>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
-    <p>StyleZone Fashion Store | Designed with HTML CSS Bootstrap</p>
+
+    <p>
+      StyleZone Fashion Store |
+      Designed with HTML CSS Bootstrap
+    </p>
+
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
